@@ -6,7 +6,7 @@ function _drawWeather() {
     let template = ''
     template += `<div class="col">
                     <h5><img src="http://openweathermap.org/img/wn/${ProxyState.weather.icon}.png" alt="">
-                        <button class="btn success" id="temp-number" onclick="app.weatherController.changeDegreeType()">
+                        <button class="btn my-text" id="temp-number" onclick="app.weatherController.changeDegreeType()">
                             ${ProxyState.weather.setTempType()}${ProxyState.weather.tempEnding}
                         </button>
                     </h5>

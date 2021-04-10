@@ -10708,3 +10708,28 @@ color: #000000;
 .my-center-height{
   height: 60vh;
 }
+
+.my-breakout{
+  position:relative;
+}
+
+.my-absolute{
+  position: absolute;
+  bottom: 100%;
+  right: 1%;
+  
+}
+
+li.list-group-item{
+margin: 0;
+padding-top: .3rem;
+padding-bottom: 0;
+padding-right: 0;
+padding-left: .5rem;
+text-align: left;
+}
+
+
+.my-strike{
+  text-decoration: line-through;
+}
