@@ -4,6 +4,7 @@ import { tasksService } from "../Services/TasksService.js";
 //Private
 function _drawTasks() {
 
+
     let template = ''
     ProxyState.tasks.forEach(t => {
         template += /*html*/`
@@ -17,9 +18,19 @@ function _drawTasks() {
 `
     })
 
+    if (ProxyState.tasks.length > 0) {
+        document.getElementById('task-title').innerText = "Task Completed"
+        document.getElementById('task-count').innerHTML = `<span id="tasks-done">0</span> / <span id="tasks-total">0</span></p >`
+    } else {
+        document.getElementById('task-title').innerText = "Add Some Tasks!"
+        document.getElementById('task-count').innerText = ""
+    }
 
     document.getElementById('my-tasks').innerHTML = template
-    console.log("drawn-tasks");
+    document.getElementById('tasks-total').innerText = ProxyState.tasks.length.toString()
+    document.getElementById('tasks-done').innerText = ProxyState.tasks.filter(t => t.completed === true).length.toString()
+
+
 }
 
 
