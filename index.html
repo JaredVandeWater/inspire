@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,19 +10,19 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calligraffitti" />
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/walrus.png">
     <title>inspire</title>
 </head>
 
-<body class="my-text">
+<body>
 
 
     <header>
         <div class=" container-fluid">
             <div class="row">
-                <div class="col d-flex justify-content-start">
-
-                </div>
-                <div class="col d-flex justify-content-end">
+                <div class="col d-flex justify-content-end pt-4 pr-5">
                     <div id="weather-stuff" class="row flex-column">
                     </div>
 
@@ -34,10 +35,10 @@
     <main>
         <div class="container">
             <div class="row my-center-height align-items-center">
-                <div class="col-4"></div>
+                <div class="col-3"></div>
 
-                <div class="col-4 d-flex align-items-center flex-column">
-                    <h1>
+                <div class="col-6 d-flex align-items-center flex-column">
+                    <h1 class="my-clock-text">
                         <div id="clockbox"></div>
 
                         <script type="text/javascript">
@@ -59,7 +60,7 @@
                             setInterval(GetClock, 1000);
                         </script>
                     </h1>
-                    <h5>
+                    <h3 class="my-date-text">
                         <div id="clockbox2"></div>
 
                         <script type="text/javascript">
@@ -77,9 +78,9 @@
                             GetClock2();
                             setInterval(GetClock2, 1000);
                         </script>
-                    </h5>
+                    </h3>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-3"></div>
             </div>
         </div>
     </main>
@@ -89,17 +90,17 @@
 
 
     <footer class="container-fluid">
-        <div class="row text-center my-breakout">
+        <div id="breakout-toggle" class="row text-center my-breakout">
             <div class="col">
             </div>
 
             <div class="col-md-6 d-flex justify-content-center">
-                <div id="quote-stuff" class="flex-column align-items-center">
+                <div id="quote-stuff" class="flex-column align-items-center my-quote-text">
                 </div>
             </div>
 
 
-            <div class="card my-absolute my-card-bg">
+            <div id="card-location" class="card my-absolute my-pos-off my-card-bg my-card-text">
                 <div class="card-body p-0 pt-2">
                     <h5 class="card-title mb-1" id="task-title"></h5>
                     <p class="card-text" id='task-count'></p>
@@ -115,11 +116,9 @@
                 </div>
             </div>
             <div class="col d-flex justify-content-end">
-
-
-                <button class="btn">
-                    <h3>Todo</h3>
-                </button>
+                <a class="p-0" onclick="app.tasksController.toggleView()">
+                    <h3 class="m-0 my-card-text">Todo</h3>
+                </a>
             </div>
 
         </div>

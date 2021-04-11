@@ -8,7 +8,6 @@ class QuotesService {
         try {
             let response = await sandboxApi.get('quotes')
             ProxyState.quote = new Quote(response.data)
-            console.log(ProxyState.quote);
         } catch (error) {
             console.error(error)
         }

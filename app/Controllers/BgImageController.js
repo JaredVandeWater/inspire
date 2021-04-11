@@ -6,7 +6,6 @@ function _drawImg() {
     let template = ''
     template += `url('${ProxyState.bgImage.bgUrl}')`
     document.body.style.backgroundImage = template;
-    console.log("drawn-img");
 }
 
 

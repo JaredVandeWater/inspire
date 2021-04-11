@@ -8,7 +8,6 @@ class TasksService {
         try {
             let response = await sandboxApi.get('jared/todos')
             ProxyState.tasks = response.data.map(t => new Task(t))
-            console.log(ProxyState.tasks);
         } catch (error) {
             console.error(error)
         }
@@ -20,7 +19,6 @@ class TasksService {
             response.data.id = response.data._id
             let task = new Task(response.data)
             ProxyState.tasks = [...ProxyState.tasks, task]
-            console.log(ProxyState.tasks);
         } catch (error) {
             console.error(error)
         }

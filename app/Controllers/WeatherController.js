@@ -5,22 +5,21 @@ import { weatherService } from "../Services/WeatherService.js";
 function _drawWeather() {
     let template = ''
     template += `<div class="col">
-                    <h5><img src="http://openweathermap.org/img/wn/${ProxyState.weather.icon}.png" alt="">
-                        <button class="btn my-text" id="temp-number" onclick="app.weatherController.changeDegreeType()">
-                            ${ProxyState.weather.setTempType()}${ProxyState.weather.tempEnding}
+                    <div class="m-0" id="temp-btn"><img src="http://openweathermap.org/img/wn/${ProxyState.weather.icon}.png" alt="weather icon">
+                        <button class="btn p-0 m-0 my-card-text" id="temp-number" onclick="app.weatherController.changeDegreeType()">
+                            <h4>${ProxyState.weather.setTempType()}${ProxyState.weather.tempEnding}</h4>
                         </button>
-                    </h5>
+                    </div>
                 </div>
-                <div class="col d-flex justify-content-end">
-                    <p class=>${ProxyState.weather.city}</p>
+                <div class="col d-flex justify-content-center my-card-text">
+                    <h4 class=>${ProxyState.weather.city}</h4>
                 </div>
 `
     document.getElementById('weather-stuff').innerHTML = template
-    console.log("drawn-weather");
 }
 
 function _drawWeatherNum() {
-    document.getElementById('temp-number').innerHTML = `${ProxyState.weather.setTempType()} ${ProxyState.weather.tempEnding}`
+    document.getElementById('temp-number').innerHTML = `<h4>${ProxyState.weather.setTempType()} ${ProxyState.weather.tempEnding}<h4>`
 }
 
 
@@ -48,6 +47,5 @@ export default class BgImageController {
     changeDegreeType() {
         ProxyState.weather.TempType = !ProxyState.weather.TempType
         _drawWeatherNum()
-        console.log(ProxyState.weather.TempType);
     }
 }

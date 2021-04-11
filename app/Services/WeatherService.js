@@ -8,7 +8,6 @@ class WeatherService {
         try {
             let response = await sandboxApi.get('weather')
             ProxyState.weather = new Weather(response.data)
-            console.log(ProxyState.quote);
         } catch (error) {
             console.error(error)
         }

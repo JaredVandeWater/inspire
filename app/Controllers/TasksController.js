@@ -2,6 +2,10 @@ import { ProxyState } from "../AppState.js";
 import { tasksService } from "../Services/TasksService.js";
 
 //Private
+
+
+let taskOnScreen = false
+
 function _drawTasks() {
 
 
@@ -19,7 +23,7 @@ function _drawTasks() {
     })
 
     if (ProxyState.tasks.length > 0) {
-        document.getElementById('task-title').innerText = "Task Completed"
+        document.getElementById('task-title').innerText = "Tasks Completed"
         document.getElementById('task-count').innerHTML = `<span id="tasks-done">0</span> / <span id="tasks-total">0</span></p >`
     } else {
         document.getElementById('task-title').innerText = "Add Some Tasks!"
@@ -55,7 +59,7 @@ export default class BgImageController {
 
     async AddTask() {
         try {
-            console.log('test');
+
             window.event.preventDefault()
             const form = window.event.target
             let formedTask = {
@@ -92,4 +96,16 @@ export default class BgImageController {
 
     }
 
+
+
+    toggleView() {
+        if (taskOnScreen) {
+            document.getElementById('card-location').classList.remove("my-pos-on")
+            document.getElementById('card-location').classList.add("my-pos-off")
+        } else {
+            document.getElementById('card-location').classList.remove("my-pos-off")
+            document.getElementById('card-location').classList.add("my-pos-on")
+        }
+        taskOnScreen = !taskOnScreen
+    }
 }
