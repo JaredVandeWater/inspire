@@ -10795,7 +10795,10 @@ transition: 0.8s;
     color: rgb(113, 230, 138);
     transition: 0.8s;
 }
-
+#todo-btn :hover{
+    color: rgb(113, 230, 138);
+    transition: 0.8s;
+}
 
 h1 {
   font-weight: bold;
