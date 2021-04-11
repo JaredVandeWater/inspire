@@ -4,7 +4,7 @@ import { quoteService } from "../Services/QuotesService.js";
 //Private
 function _drawQuote() {
     let template = ''
-    template += `<h5>${ProxyState.quote.quote}</h5><p>-${ProxyState.quote.author}</p>`
+    template += `<h5 id="main-quote">${ProxyState.quote.quote}</h5><p id="main-quote-author">-${ProxyState.quote.author}</p>`
     document.getElementById('quote-stuff').innerHTML = template
     console.log("drawn-quote");
 }

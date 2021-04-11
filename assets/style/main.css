@@ -10737,3 +10737,17 @@ text-align: left;
 .no-strike{
   text-decoration: none;
 }
+
+
+#main-quote:hover ~ #main-quote-author{
+color:black ;
+
+}
+
+#main-quote-author{
+color:transparent
+}
+
+.my-card-bg{
+  background-color: rgba(29, 78, 51, 0.671);
+}
