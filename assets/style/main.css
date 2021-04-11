@@ -10700,7 +10700,6 @@ main {
 
 /*# sourceMappingURL=main.css.map */
 .my-text{
-color: #FFFFFF;
 text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 color: #000000;
 }
@@ -10741,11 +10740,15 @@ text-align: left;
 
 #main-quote:hover ~ #main-quote-author{
 color:black ;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+transition: 0.3s;
 
 }
 
 #main-quote-author{
-color:transparent
+color:transparent;
+text-shadow: none;
+transition: 0.8s;
 }
 
 .my-card-bg{

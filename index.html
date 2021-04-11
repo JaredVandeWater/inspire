@@ -19,25 +19,7 @@
         <div class=" container-fluid">
             <div class="row">
                 <div class="col d-flex justify-content-start">
-                    <h5>
-                        <div id="clockbox2"></div>
 
-                        <script type="text/javascript">
-                            var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                            var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-                            function GetClock2() {
-                                var d = new Date();
-                                var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
-
-                                var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + "";
-                                document.getElementById('clockbox2').innerHTML = clocktext;
-                            }
-
-                            GetClock2();
-                            setInterval(GetClock2, 1000);
-                        </script>
-                    </h5>
                 </div>
                 <div class="col d-flex justify-content-end">
                     <div id="weather-stuff" class="row flex-column">
@@ -54,7 +36,7 @@
             <div class="row my-center-height align-items-center">
                 <div class="col-4"></div>
 
-                <div class="col-4 d-flex justify-content-center">
+                <div class="col-4 d-flex align-items-center flex-column">
                     <h1>
                         <div id="clockbox"></div>
 
@@ -77,6 +59,25 @@
                             setInterval(GetClock, 1000);
                         </script>
                     </h1>
+                    <h5>
+                        <div id="clockbox2"></div>
+
+                        <script type="text/javascript">
+                            var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                            var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                            function GetClock2() {
+                                var d = new Date();
+                                var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+
+                                var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + "";
+                                document.getElementById('clockbox2').innerHTML = clocktext;
+                            }
+
+                            GetClock2();
+                            setInterval(GetClock2, 1000);
+                        </script>
+                    </h5>
                 </div>
                 <div class="col-4"></div>
             </div>
