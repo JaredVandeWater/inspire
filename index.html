@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>inspire</title>
 </head>
 
@@ -66,17 +67,21 @@
                     <h5 class="card-title mb-1">Tasks Complete</h5>
                     <p class="card-text">0 / 0</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item my-strike">
-                        <input type="checkbox" class="mr-2">Item
-
+                <ul class="list-group list-group-flush" id="my-tasks">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div class="my-strike">
+                            <input type="checkbox" class="mr-2">
+                        </div>
+                        <button class="text-danger btn p-0 mr-2 "><i class="fas fa-times-circle"></i></button>
                     </li>
 
                 </ul>
                 <div class="card-body p-2">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="New Task...">
-                    </div>
+                    <form class="form-group" onsubmit="app.tasksController.AddTask()">
+                        <input type="text" id="description" class="form-control" placeholder="New Task..." required
+                            minlength="1" maxlength="20">
+                        <input type="submit" style="display: none" />
+                    </form>
                 </div>
             </div>
             <div class="col d-flex justify-content-end">

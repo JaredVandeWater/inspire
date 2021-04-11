@@ -10733,3 +10733,7 @@ text-align: left;
 .my-strike{
   text-decoration: line-through;
 }
+
+.no-strike{
+  text-decoration: none;
+}

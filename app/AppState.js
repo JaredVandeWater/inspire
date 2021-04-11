@@ -2,6 +2,7 @@
 import BgImage from "./Models/BgImage.js"
 import Quote from "./Models/Quote.js"
 import Weather from "./Models/Weather.js"
+import Tasks from "./Models/Task.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -15,6 +16,8 @@ class AppState extends EventEmitter {
   /** @type {Weather} */
   weather = null
 
+  /** @type {Tasks[]} */
+  tasks = []
 
 }
 
