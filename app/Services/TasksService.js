@@ -40,11 +40,9 @@ class TasksService {
     }
 
     async deleteTask(id) {
-        console.log('Deleting');
         try {
             let response = await sandboxApi.delete(`jared/todos/${id}`)
-            ProxyState.tasks = new Task(response.data)
-            console.log(ProxyState.tasks);
+            ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
         } catch (error) {
             console.error(error)
         }

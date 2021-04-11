@@ -8,8 +8,11 @@ function _drawTasks() {
     ProxyState.tasks.forEach(t => {
         template += /*html*/`
            
-        <li class="list-group-item ${t.completed ? 'my-strike' : ""}">
-            <input onchange="app.tasksController.checkTask('${t.id}')" type="checkbox" class="mr-2" ${t.completed ? 'checked' : ''}>${t.description}
+        <li class="list-group-item d-flex justify-content-between">
+            <div class="${t.completed ? 'my-strike' : ""}">
+                <input onchange="app.tasksController.checkTask('${t.id}')" type="checkbox" class="mr-2" ${t.completed ? 'checked' : ''}>${t.description}
+            </div>
+            <button onclick="app.tasksController.deleteTask('${t.id}')" class="text-danger btn p-0 mr-2 "><i class="fas fa-times-circle"></i></button>
         </li>
 `
     })
@@ -27,7 +30,7 @@ export default class BgImageController {
     constructor() {
         ProxyState.on('tasks', _drawTasks)
 
-        //this.grabTasks()
+        this.grabTasks()
 
     }
 
@@ -69,13 +72,13 @@ export default class BgImageController {
         }
     }
 
-    // async deleteTask() {
-    //     try {
-    //         await tasksService.deleteTask(id)
-    //     } catch (error) {
-    //         console.error(error)
-    //     }
+    async deleteTask(id) {
+        try {
+            await tasksService.deleteTask(id)
+        } catch (error) {
+            console.error(error)
+        }
 
-    // }
+    }
 
 }
