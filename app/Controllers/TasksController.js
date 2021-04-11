@@ -9,11 +9,11 @@ function _drawTasks() {
     ProxyState.tasks.forEach(t => {
         template += /*html*/`
            
-        <li class="list-group-item d-flex justify-content-between">
+        <li class="list-group-item d-flex justify-content-between my-card-bg2">
             <div class="${t.completed ? 'my-strike' : ""}">
                 <input onchange="app.tasksController.checkTask('${t.id}')" type="checkbox" class="mr-2" ${t.completed ? 'checked' : ''}>${t.description}
             </div>
-            <button onclick="app.tasksController.deleteTask('${t.id}')" class="text-danger btn p-0 mr-2 "><i class="fas fa-times-circle"></i></button>
+            <button onclick="app.tasksController.deleteTask('${t.id}')" class="text-white btn p-0 mr-2 "><i class="fas fa-times-circle"></i></button>
         </li>
 `
     })

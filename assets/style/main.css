@@ -10751,3 +10751,12 @@ color:transparent
 .my-card-bg{
   background-color: rgba(29, 78, 51, 0.671);
 }
+
+.my-card-bg2{
+  background-color: rgba(111, 185, 144, 0.822);
+}
+
+.my-card-search{
+  background-color: rgb(197, 238, 215);
+  color:black;
+}
