@@ -10760,14 +10760,14 @@ text-align: left;
     font-size: 35px;
     word-spacing: 2px;
     color: rgb(255, 208, 0);
-    text-shadow: rgb(0, 0, 0) 0px 2px 3px, rgb(0, 0, 0) 0px 2px 3px;
+    text-shadow: rgb(0, 0, 0) 0px 2px 3px, rgb(0, 0, 0) 0px 2px 3px, rgb(0, 0, 0) 0px 2px 3px,rgb(0, 0, 0) 0px 2px 8px;
 
 
 }
 
 #main-quote:hover ~ #main-quote-author{
 color: rgb(255, 208, 0);
-text-shadow: rgb(0, 0, 0) 0px 2px 3px, rgb(0, 0, 0) 0px 2px 3px;
+text-shadow: rgb(0, 0, 0) 0px 2px 3px, rgb(0, 0, 0) 0px 2px 8px;
 transition: 0.3s;
 
 }
